@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/category_bg"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/sample_image" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/img_product"
+                android:fontFamily="@font/syne_semibold"
+                android:textColor="@color/black"
+                tools:text="Uniform L" />
+
+            <TextView
+                android:id="@+id/prodPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/prodName"
+                android:layout_toRightOf="@id/img_product"
+                android:fontFamily="@font/syne"
+                android:textColor="@color/black"
+                tools:text="₱300.00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/qty_LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_subtract"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_btn_add"
+                android:fontFamily="@font/syne"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/qty_item"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_btn_item"
+                android:fontFamily="@font/syne"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_btn_add"
+                android:fontFamily="@font/syne"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/delete_btn"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:background="@drawable/delete_btn" />
+
+</LinearLayout>
